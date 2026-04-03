@@ -190,6 +190,13 @@
   border-bottom: none;
 }
 
+/* ---------- About Me: smaller hero photo ---------- */
+.post.featured .image.main {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ---------- Responsive: prevent overflow ---------- */
 @media screen and (max-width: 736px) {
   .posts article p {
