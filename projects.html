@@ -57,7 +57,7 @@
                         <h2>Resume RAG Chatbot <a href="https://resume-chatbot-production.up.railway.app/" target="_blank" class="live-badge">Live Demo</a></h2>
                         <span class="project-tech">Python, React, FastAPI, FAISS, Anthropic Claude API</span>
                     </header>
-                    <a href="https://resume-chatbot-production.up.railway.app/" class="image fit" target="_blank"><img src="images/mashroom project.jpeg" alt="Resume RAG Chatbot"></a>
+                    <a href="https://resume-chatbot-production.up.railway.app/" class="image fit" target="_blank"><img src="images/resume-chatbot.png" alt="Resume RAG Chatbot"></a>
                     <p>
                         End-to-end RAG chatbot that answers questions about my background. Hybrid retrieval combining BM25 keyword search and FAISS dense embeddings with configurable alpha weighting (inspired by my Pinecone internship). Query rewriting layer using Claude for vague-to-specific expansion. Empirical alpha sweep across 15 Q&A pairs using LLM-as-judge found pure semantic retrieval achieved 5.0/5.0 relevance. React frontend with SSE streaming, source attribution, and dark/light mode. Docker containerized, deployed on Railway with rate limiting.
                     </p>
@@ -74,7 +74,7 @@
                         <h2>Automated Trading System</h2>
                         <span class="project-tech">Python, WebSocket, PM2, Discord API</span>
                     </header>
-                    <a href="https://github.com/charlieyang1557/polymarket-arb" class="image fit"><img src="images/covid api.jpeg" alt="Automated Trading System"></a>
+                    <a href="https://github.com/charlieyang1557/polymarket-arb" class="image fit"><img src="images/automated-trading-system.png" alt="Automated Trading System"></a>
                     <p>
                         Automated market-making system for CFTC-regulated prediction markets (Polymarket US &amp; Kalshi). OBI microprice estimation, continuous inventory skew, and dynamic spread adjustment. 4-layer risk management from fat-finger checks to system-level circuit breakers. Platform-agnostic adapter pattern so the same engine works across exchanges. Calibration study on 10,000+ resolved markets validated edge before committing capital. Paper trading: +151.9c P&amp;L across 71+ fills in 11 sessions. Runs 24/7 on Mac Mini with PM2 and Discord alerts.
                     </p>
@@ -91,7 +91,7 @@
                         <h2>Tock Reservation Bot</h2>
                         <span class="project-tech">Python, Playwright, PM2, Discord API</span>
                     </header>
-                    <a href="https://github.com/charlieyang1557/tock-reservation-bot" class="image fit"><img src="images/abalone.jpeg" alt="Tock Reservation Bot"></a>
+                    <a href="https://github.com/charlieyang1557/tock-reservation-bot" class="image fit"><img src="images/tock-reservation-bot.png" alt="Tock Reservation Bot"></a>
                     <p>
                         Automated reservation sniper for high-demand restaurants on Tock. Playwright browser automation handling the full booking flow: login, calendar navigation, slot detection with 6-selector fallback, and checkout. Two modes: hourly polling for scanning and precision sniper mode (3-second polls during release windows). Concurrent booking across multiple dates, session cookie persistence, Discord notifications. Deployed 24/7 on Mac Mini via PM2.
                     </p>
