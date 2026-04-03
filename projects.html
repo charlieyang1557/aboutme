@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
     Author: Massively by HTML5 UP
-    Editor: Minger Lin 
+    Editor: Minger Lin
     Resource: html5up.net | @ajlkn
     License: Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
@@ -12,9 +12,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body class="" data-new-gr-c-s-check-loaded="14.1115.0" data-gr-ext-installed="">
+<body class="">
     <!-- Wrapper -->
     <div id="wrapper">
         <!-- Header -->
@@ -29,6 +30,7 @@
                     <li class="active"><a href="projects.html">Projects</a></li>
                     <li><a href="experience.html">Experience</a></li>
                     <li><a href="life.html">Life</a></li>
+                    <li class="nav-cta"><a href="https://resume-chatbot-production.up.railway.app/" target="_blank">AI Resume</a></li>
                 </ul>
                 <ul class="icons">
                     <li><a href="https://www.linkedin.com/in/yutianyang/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -36,95 +38,158 @@
                 </ul>
             </nav>
 
-
         <!-- Main -->
         <div id="main">
             <!-- Post -->
             <section class="post">
                 <header class="major">
                     <p>
-                        Below are the highlighting projects I have done at UC Davis.
+                        Personal projects and academic work spanning RAG systems, automated trading, browser automation, and machine learning.
                     </p>
                 </header>
             </section>
             <!-- Projects -->
             <section class="posts">
+
+                <!-- Resume RAG Chatbot -->
+                <article>
+                    <header>
+                        <h2>Resume RAG Chatbot <a href="https://resume-chatbot-production.up.railway.app/" target="_blank" class="live-badge">Live Demo</a></h2>
+                        <span class="project-tech">Python, React, FastAPI, FAISS, Anthropic Claude API</span>
+                    </header>
+                    <a href="https://resume-chatbot-production.up.railway.app/" class="image fit" target="_blank"><img src="images/mashroom project.jpeg" alt="Resume RAG Chatbot"></a>
+                    <p>
+                        End-to-end RAG chatbot that answers questions about my background. Hybrid retrieval combining BM25 keyword search and FAISS dense embeddings with configurable alpha weighting (inspired by my Pinecone internship). Query rewriting layer using Claude for vague-to-specific expansion. Empirical alpha sweep across 15 Q&A pairs using LLM-as-judge found pure semantic retrieval achieved 5.0/5.0 relevance. React frontend with SSE streaming, source attribution, and dark/light mode. Docker containerized, deployed on Railway with rate limiting.
+                    </p>
+                    <ul class="actions special">
+                        <li>
+                            <a href="https://resume-chatbot-production.up.railway.app/" target="_blank" class="button">Try it live</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Automated Trading System -->
+                <article>
+                    <header>
+                        <h2>Automated Trading System</h2>
+                        <span class="project-tech">Python, WebSocket, PM2, Discord API</span>
+                    </header>
+                    <a href="https://github.com/charlieyang1557/polymarket-arb" class="image fit"><img src="images/covid api.jpeg" alt="Automated Trading System"></a>
+                    <p>
+                        Automated market-making system for CFTC-regulated prediction markets (Polymarket US &amp; Kalshi). OBI microprice estimation, continuous inventory skew, and dynamic spread adjustment. 4-layer risk management from fat-finger checks to system-level circuit breakers. Platform-agnostic adapter pattern so the same engine works across exchanges. Calibration study on 10,000+ resolved markets validated edge before committing capital. Paper trading: +151.9c P&amp;L across 71+ fills in 11 sessions. Runs 24/7 on Mac Mini with PM2 and Discord alerts.
+                    </p>
+                    <ul class="actions special">
+                        <li>
+                            <a href="https://github.com/charlieyang1557/polymarket-arb" class="button">Check it out</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Tock Reservation Bot -->
+                <article>
+                    <header>
+                        <h2>Tock Reservation Bot</h2>
+                        <span class="project-tech">Python, Playwright, PM2, Discord API</span>
+                    </header>
+                    <a href="https://github.com/charlieyang1557/tock-reservation-bot" class="image fit"><img src="images/abalone.jpeg" alt="Tock Reservation Bot"></a>
+                    <p>
+                        Automated reservation sniper for high-demand restaurants on Tock. Playwright browser automation handling the full booking flow: login, calendar navigation, slot detection with 6-selector fallback, and checkout. Two modes: hourly polling for scanning and precision sniper mode (3-second polls during release windows). Concurrent booking across multiple dates, session cookie persistence, Discord notifications. Deployed 24/7 on Mac Mini via PM2.
+                    </p>
+                    <ul class="actions special">
+                        <li>
+                            <a href="https://github.com/charlieyang1557/tock-reservation-bot" class="button">Check it out</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <!-- Mushroom Classification -->
                 <article>
                     <header>
                         <h2>Classification of Mushrooms: Edible or Poisonous (Python)</h2>
                     </header>
-                    <a href="https://www.kaggle.com/datasets/marcosvolpato/edible-and-poisonous-fungi" class="image fit"><img src="images/mashroom project.jpeg" alt=""></a>
+                    <a href="https://www.kaggle.com/datasets/marcosvolpato/edible-and-poisonous-fungi" class="image fit"><img src="images/mashroom project.jpeg" alt="Mushroom Classification"></a>
                     <p>
                         This project develops machine learning models for accurately classifying mushrooms as edible or poisonous using a dataset of 3000+ images. Address challenges in mushroom identification and provide valuable tools for mushroom enthusiasts and field scientists.
                     </p>
                     <ul class="actions special">
                         <li>
-                            <a href="https://github.com/charlieyang1557/STA-221-Mushroom-Classification" class="button">check it out</a>
+                            <a href="https://github.com/charlieyang1557/STA-221-Mushroom-Classification" class="button">Check it out</a>
                         </li>
                     </ul>
                 </article>
+
+                <!-- COVID Vaccination Policy -->
                 <article>
                     <header>
                         <h2>Impacts of Vaccination Policy on COVID-19 Cases (R)</h2>
                     </header>
-                    <a href="https://github.com/yige-luo/Covid-and-vaccination-policy" class="image fit"><img src="images/covid vaccine.jpeg" alt=""></a>
+                    <a href="https://github.com/yige-luo/Covid-and-vaccination-policy" class="image fit"><img src="images/covid vaccine.jpeg" alt="COVID Vaccination Policy"></a>
                     <p>
                         In this project, we assess the impact of government vaccination policies on Covid-19 spread across countries. Analyze time series data, including infection rates, testing rates, and vaccination policies. Build accurate ARIMAX models to understand policy effectiveness and inform decision-making. Discuss limitations and future considerations for analysis.
                     </p>
                     <ul class="actions special">
                         <li>
-                            <a href="https://github.com/yige-luo/Covid-and-vaccination-policy" class="button">check it out</a>
+                            <a href="https://github.com/yige-luo/Covid-and-vaccination-policy" class="button">Check it out</a>
                         </li>
                     </ul>
                 </article>
+
+                <!-- Abalone Age Prediction -->
                 <article>
                     <header>
                         <h2>Abalone Age Prediction Using Three Comparable Models (Python, R)</h2>
                     </header>
-                    <a href="https://drive.google.com/file/d/1qMdmpbo-BmBeArOTeOvtpVC1dCRWUXK5/view?usp=sharing" class="image fit"><img src="images/abalone.jpeg" alt=""></a>
+                    <a href="https://drive.google.com/file/d/1qMdmpbo-BmBeArOTeOvtpVC1dCRWUXK5/view?usp=sharing" class="image fit"><img src="images/abalone.jpeg" alt="Abalone Age Prediction"></a>
                     <p>
-                        This project utilizes physical measurements instead of time-consuming methods, exploring multiple regression techniques to estimate abalone age. With a dataset of 4177 observations and 9 variables, including the response variable "Rings," we address challenges like high correlation and multicollinearity. Our goal is to provide an efficient and accurate approach to age estimation, transforming the abalone industry.                    
+                        This project utilizes physical measurements instead of time-consuming methods, exploring multiple regression techniques to estimate abalone age. With a dataset of 4177 observations and 9 variables, including the response variable "Rings," we address challenges like high correlation and multicollinearity. Our goal is to provide an efficient and accurate approach to age estimation, transforming the abalone industry.
                     </p>
                     <ul class="actions special">
-                        <li><a href="https://drive.google.com/file/d/1qMdmpbo-BmBeArOTeOvtpVC1dCRWUXK5/view?usp=sharing" class="button">check it out</a></li>
+                        <li><a href="https://drive.google.com/file/d/1qMdmpbo-BmBeArOTeOvtpVC1dCRWUXK5/view?usp=sharing" class="button">Check it out</a></li>
                     </ul>
                 </article>
+
+                <!-- Wheat Classification -->
                 <article>
                     <header>
                         <h2>Wheat Classification: Exploring Varietal Characteristics and Relationships (Python)</h2>
                     </header>
-                    <a href="images/STA 160 Seed.docx.pdf" class="image fit"><img src="images/wheat.jpeg" alt=""></a>
+                    <a href="images/STA 160 Seed.docx.pdf" class="image fit"><img src="images/wheat.jpeg" alt="Wheat Classification"></a>
                     <p>
                         This research project analyzes and classifies Kama, Rosa, and Canadian wheat based on kernel features. Utilizing visualization, correlation analysis, and classification techniques, we uncover distinct characteristics and establish feature relationships. Applying methods like LOOCV and random forest grid search, we provide valuable insights into wheat differentiation and classification.
                     </p>
                     <ul class="actions special">
-                        <li><a href="https://github.com/charlieyang1557/STA-160-Wheat-Classification" class="button">check it out</a></li>
+                        <li><a href="https://github.com/charlieyang1557/STA-160-Wheat-Classification" class="button">Check it out</a></li>
                     </ul>
                 </article>
+
+                <!-- COVID Dashboard -->
                 <article>
                     <header>
                         <h2>Visualizing COVID-19 Impact: A Real-Time Data Dashboard (R Shiny)</h2>
                     </header>
-                    <a href="https://github.com/charlieyang1557/STA-141B-Covid-Dashboard" class="image fit"><img src="images/covid api.jpeg" alt=""></a>
+                    <a href="https://github.com/charlieyang1557/STA-141B-Covid-Dashboard" class="image fit"><img src="images/covid api.jpeg" alt="COVID Dashboard"></a>
                     <p>
-                        This project utilizes the power of Shiny and Plotly in R to develop an interactive, real-time dashboard visualizing the COVID-19 impact worldwide. Using the covid19api, the dashboard provides information on daily cases, deaths, and recoveries per country, including an all-encompassing global overview, thus serving as a comprehensive tool for COVID-19 data analysis and insights.            
+                        This project utilizes the power of Shiny and Plotly in R to develop an interactive, real-time dashboard visualizing the COVID-19 impact worldwide. Using the covid19api, the dashboard provides information on daily cases, deaths, and recoveries per country, including an all-encompassing global overview, thus serving as a comprehensive tool for COVID-19 data analysis and insights.
                     </p>
                     <ul class="actions special">
-                        <li><a href="https://github.com/charlieyang1557/STA-141B-Covid-Dashboard" class="button">check it out</a></li>
+                        <li><a href="https://github.com/charlieyang1557/STA-141B-Covid-Dashboard" class="button">Check it out</a></li>
                     </ul>
                 </article>
+
+                <!-- Information Cascades -->
                 <article>
                     <header>
                         <h2>Unveiling Information Cascades (R)</h2>
                     </header>
-                    <a href="images/Team B_ Information Cascades.pdf" class="image fit"><img src="images/information cascade.jpeg" alt=""></a>
+                    <a href="images/Team B_ Information Cascades.pdf" class="image fit"><img src="images/information cascade.jpeg" alt="Information Cascades"></a>
                     <p>
                         This research project explores how participants' reliance on public predictions can override their own private information in decision-making. Through an experiment involving sequential predictions and payoff incentives, the study investigates information cascades and their impact on rational decision making. The findings shed light on herding behavior and have implications for various domains such as investments, marketing, and voting.
                     </p>
                     <ul class="actions special">
-                        <li><a href="https://github.com/charlieyang1557/ECN-190-Information-Cascades" class="button">check it out</a></li>
+                        <li><a href="https://github.com/charlieyang1557/ECN-190-Information-Cascades" class="button">Check it out</a></li>
                     </ul>
                 </article>
+
             </section>
         </div>
 
@@ -133,17 +198,13 @@
             <section class="split contact">
                 <section>
                     <h3>Email</h3>
-					<p><a href="mailto:charlieyang990314@gmail.com">charlieyang990314@gmail.com</a></p>
+                    <p><a href="mailto:charlieyang990314@gmail.com">charlieyang990314@gmail.com</a></p>
                 </section>
                 <section>
                     <h3>Social</h3>
                     <ul class="icons alt">
-                        <li>
-                            <a href="https://www.linkedin.com/in/yutianyang/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/charlieyang1557?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a>
-                        </li>
+                        <li><a href="https://www.linkedin.com/in/yutianyang/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/charlieyang1557?tab=repositories" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                     </ul>
                 </section>
             </section>
@@ -152,12 +213,10 @@
         <!-- Copyright -->
         <div id="copyright">
             <ul>
-                <li>© Yutian (Charlie) Yang, 2023</li>
+                <li>&copy; Yutian (Charlie) Yang, 2026</li>
                 <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
-        <div class="bg fixed" style="transform: none;"></div>
-        <a href="#navPanel" id="navPanelToggle" class="">Menu</a>
     </div>
 
     <!-- Scripts -->
@@ -168,27 +227,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <!-- <div id="navPanel">
-        <nav>
-            <ul class="links">
-                <li><a href="index.html">about me</a></li>
-                <li class="active"><a href="projects.html">projects</a></li>
-                <li><a href="experience.html">experience</a></li>
-                <li><a href="life.html">life</a></li>
-            </ul>
-            <ul class="icons alt">
-                <li>
-                    <a href="https://www.linkedin.com/in/yutianyang/" class="icon brands fa-linkedin alt"><span class="label">Twitter</span></a>
-                </li>
-                <li>
-                    <a href="https://github.com/charlieyang1557/Yutian-Yang" class="icon brands fa-github alt"><span class="label">GitHub</span></a>
-                </li>
-            </ul>
-        </nav>
-        <a href="#navPanel" class="close" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></a>
-    </div> -->
-
-    <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script>
 </body>
 </html>
