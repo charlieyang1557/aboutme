@@ -112,15 +112,19 @@
   object-fit: cover;
 }
 
-/* ---------- Life: center images in card ---------- */
+/* ---------- Life: center full images in card ---------- */
 .posts article .image.fit.life-img {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
 }
 .posts article .image.fit.life-img img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
   height: auto;
+  object-fit: contain;
 }
 
 /* ---------- Experience: card layout consistency ---------- */
